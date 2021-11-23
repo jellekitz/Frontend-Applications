@@ -1,13 +1,17 @@
-import "./styles/App.scss";
+import "./styles/app.scss";
 import Title from "./components/Title.js";
+import Svg from "./components/Svg.js";
 import Filter from "./components/Filter.js";
 
 const App = () => {
   return (
-    <section>
+    <div>
       <Title />
-      <Filter />
-    </section>
+      <section className="wrapper">
+        <Svg />
+        <Filter />
+      </section>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 const FilterIngredients = () => {
-  return <p>Placeholder</p>;
+  return <p className="filter__ingredients">Placeholder</p>;
 };
 
 export default FilterIngredients;

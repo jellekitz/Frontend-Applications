@@ -1,0 +1,14 @@
+@import "colors.scss";
+
+.cocktail {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.filter {
+  padding: 1rem;
+  background-color: $grey;
+}

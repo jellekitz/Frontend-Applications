@@ -1,5 +1,5 @@
 const FilterMeasure = () => {
-  return <p>Placeholder</p>;
+  return <p className="filter__measure">Placeholder</p>;
 };
 
 export default FilterMeasure;

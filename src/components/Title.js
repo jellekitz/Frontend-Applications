@@ -1,8 +1,8 @@
 const Title = () => {
   return (
-    <div>
-      <h1>Het werkt</h1>
-    </div>
+    <section className="cocktail">
+      <h1 className="cocktail__title">Het werkt</h1>
+    </section>
   );
 };
 
