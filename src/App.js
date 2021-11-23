@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.scss";
 import Title from "./components/Title.js";
 import Filter from "./components/Filter.js";
 

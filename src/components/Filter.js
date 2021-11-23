@@ -4,7 +4,7 @@ import FilterIngredients from "./filter/Filter-ingredients.js";
 
 const Filter = () => {
   return (
-    <section>
+    <section className="">
       <FilterTitle />
       <FilterMeasure />
       <FilterIngredients />
