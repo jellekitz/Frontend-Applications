@@ -7,10 +7,12 @@ import Filter from "./components/Filter";
 const App = () => {
   return (
     <CocktailProvider>
-      <div>
-        <Title />
-        <section className="wrapper">
+      <div className="wrapper">
+        <section className="cocktail">
           <Svg />
+        </section>
+        <section className="filter">
+          <Title />
           <Filter />
         </section>
       </div>

@@ -4,11 +4,11 @@ import FilterIngredients from "./filter/Filter-ingredients.js";
 
 const Filter = () => {
   return (
-    <section className="filter">
+    <>
       <FilterTitle />
       <FilterMeasure />
       <FilterIngredients />
-    </section>
+    </>
   );
 };
 

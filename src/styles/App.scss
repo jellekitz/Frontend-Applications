@@ -1,14 +1,45 @@
 @import "colors.scss";
 
-.cocktail {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $grey;
 }
 
 .wrapper {
   display: flex;
 }
 
+.cocktail {
+  padding: 4rem;
+  width: 100%;
+  max-height: 100vh;
+
+  &__glass {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 .filter {
-  padding: 1rem;
-  background-color: $grey;
+  margin: 0 0 0 auto;
+  padding: 2.5rem 2rem;
+  min-width: 22rem;
+  min-height: 100vh;
+  background-color: $black;
+  color: $white;
+
+  h1,
+  h2 {
+    color: $orange-shade;
+  }
+
+  h2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+  }
 }

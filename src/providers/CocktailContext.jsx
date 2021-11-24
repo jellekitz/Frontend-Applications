@@ -1,21 +1,20 @@
 import { createContext, useState, useEffect } from "react";
+import * as d3 from "d3";
 
 const CocktailContext = createContext(null);
 
 export const CocktailProvider = ({ children }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar")
-      .then((res) => res.json())
-      .then((cocktailData) => {
-        setData(cocktailData.drinks[0]);
+    d3.json(
+      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar"
+    ).then((data) => {
+      setData(data.drinks[0]);
 
-        // cocktailData.drinks.forEach((obj) => {
+      // data.drinks.forEach((obj) => {});
 
-        // });
-
-        // console.log(cocktailData);
-      });
+      // console.log(data);
+    });
   }, []);
 
   return (
