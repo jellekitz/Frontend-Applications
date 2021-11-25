@@ -1,20 +1,87 @@
 import { createContext, useState, useEffect } from "react";
+import { removeText, toNumber, addDash } from "../scripts/sanitize.js";
 import * as d3 from "d3";
 
 const CocktailContext = createContext(null);
 
+export const cocktailData = [];
+
 export const CocktailProvider = ({ children }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    d3.json(
-      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar"
-    ).then((data) => {
-      setData(data.drinks[0]);
+    d3.json("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar")
+      .then((data) => {
+        const dataObject = data.drinks[0];
+        setData(dataObject);
 
-      // data.drinks.forEach((obj) => {});
+        console.log(setData(dataObject));
 
-      // console.log(data);
-    });
+        const ingredients = [];
+        const measure = [];
+
+        data.drinks.forEach((obj) => {
+          const firstIngr = obj["strIngredient1"];
+          const secondIngr = obj["strIngredient2"];
+          const thirdIngr = obj["strIngredient3"];
+          const fourthIngr = obj["strIngredient4"];
+          const fifthIngr = obj["strIngredient5"];
+
+          const firstMeasure = obj["strMeasure1"];
+          const secondMeasure = obj["strMeasure2"];
+          const thirdMeasure = obj["strMeasure3"];
+          const fourthMeasure = obj["strMeasure4"];
+          const fifthMeasure = obj["strMeasure5"];
+
+          ingredients.push(
+            firstIngr,
+            secondIngr,
+            thirdIngr,
+            fourthIngr,
+            fifthIngr
+          );
+          measure.push(
+            firstMeasure,
+            secondMeasure,
+            thirdMeasure,
+            fourthMeasure,
+            fifthMeasure
+          );
+        });
+
+        const stringNumber = removeText(measure);
+        const measureNumber = toNumber(stringNumber);
+        const dashedIngridient = addDash(ingredients);
+
+        const newData = [
+          {
+            type: `${dashedIngridient[0]}`,
+            value: measureNumber[0],
+            color: "#581845",
+          },
+          {
+            type: `${dashedIngridient[1]}`,
+            value: measureNumber[1],
+            color: "#C70039",
+          },
+          {
+            type: `${dashedIngridient[2]}`,
+            value: measureNumber[2],
+            color: "#FFC300",
+          },
+          {
+            type: `${dashedIngridient[3]}`,
+            value: measureNumber[3],
+            color: "#DAF7A6",
+          },
+          {
+            type: `${dashedIngridient[4]}`,
+            value: measureNumber[4],
+            color: "#FF5733",
+          },
+        ];
+        cocktailData.push(newData);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
