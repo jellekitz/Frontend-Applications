@@ -4,18 +4,12 @@ import * as d3 from "d3";
 
 const CocktailContext = createContext(null);
 
-export const cocktailData = [];
-
 export const CocktailProvider = ({ children }) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+
   useEffect(() => {
     d3.json("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar")
       .then((data) => {
-        const dataObject = data.drinks[0];
-        setData(dataObject);
-
-        console.log(setData(dataObject));
-
         const ingredients = [];
         const measure = [];
 
@@ -79,7 +73,8 @@ export const CocktailProvider = ({ children }) => {
             color: "#FF5733",
           },
         ];
-        cocktailData.push(newData);
+
+        setData(newData);
       })
       .catch((err) => console.log(err));
   }, []);

@@ -1,4 +1,5 @@
 import "./styles/app.scss";
+import { ApiProvider } from "./providers/ApiContext";
 import { CocktailProvider } from "./providers/CocktailContext";
 import Title from "./components/Title";
 import Svg from "./components/Svg";
@@ -12,7 +13,9 @@ const App = () => {
           <Svg />
         </section>
         <section className="filter">
-          <Title />
+          <ApiProvider>
+            <Title />
+          </ApiProvider>
           <Filter />
         </section>
       </div>
