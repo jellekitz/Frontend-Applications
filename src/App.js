@@ -15,8 +15,8 @@ const App = () => {
         <section className="filter">
           <ApiProvider>
             <Title />
+            <Filter />
           </ApiProvider>
-          <Filter />
         </section>
       </div>
     </CocktailProvider>
