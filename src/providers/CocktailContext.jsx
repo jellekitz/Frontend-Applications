@@ -13,6 +13,8 @@ export const CocktailProvider = ({ children }) => {
         const ingredients = [];
         const measure = [];
 
+        console.log(data);
+
         data.drinks.forEach((obj) => {
           const firstIngr = obj["strIngredient1"];
           const secondIngr = obj["strIngredient2"];
