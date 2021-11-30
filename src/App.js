@@ -2,7 +2,7 @@ import "./styles/app.scss";
 import { ApiProvider } from "./providers/ApiContext";
 import { CocktailProvider } from "./providers/CocktailContext";
 import Title from "./components/Title";
-import Svg from "./components/Svg";
+import Svg from "./components/svg/Svg";
 import Filter from "./components/Filter";
 
 const App = () => {

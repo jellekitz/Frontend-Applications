@@ -44,31 +44,31 @@ export const CocktailProvider = ({ children }) => {
 
         const stringNumber = removeText(measure);
         const measureNumber = toNumber(stringNumber);
-        const dashedIngridient = addDash(ingredients);
+        const dashedIngredient = addDash(ingredients);
 
         const newData = [
           {
-            type: `${dashedIngridient[0]}`,
+            type: `${dashedIngredient[0]}`,
             value: measureNumber[0],
             color: "#581845",
           },
           {
-            type: `${dashedIngridient[1]}`,
+            type: `${dashedIngredient[1]}`,
             value: measureNumber[1],
             color: "#C70039",
           },
           {
-            type: `${dashedIngridient[2]}`,
+            type: `${dashedIngredient[2]}`,
             value: measureNumber[2],
             color: "#FFC300",
           },
           {
-            type: `${dashedIngridient[3]}`,
+            type: `${dashedIngredient[3]}`,
             value: measureNumber[3],
             color: "#DAF7A6",
           },
           {
-            type: `${dashedIngridient[4]}`,
+            type: `${dashedIngredient[4]}`,
             value: measureNumber[4],
             color: "#FF5733",
           },

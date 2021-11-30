@@ -15,6 +15,7 @@ body {
 }
 
 .cocktail {
+  position: relative;
   padding: 4rem;
   width: 100%;
   max-height: 100vh;
@@ -23,6 +24,26 @@ body {
     max-width: 100%;
     max-height: 100%;
   }
+
+  &__glass-data {
+    position: absolute;
+  }
+}
+
+.data-container {
+  position: absolute;
+  z-index: -1;
+  color: $white;
+  bottom: 356px;
+  left: 136px;
+  min-width: 320px;
+}
+
+rect {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter {
@@ -54,6 +75,7 @@ body {
 
   &__ingredient {
     display: flex;
+    align-items: center;
     margin: 0 0 0.5rem 0;
     &-color {
       display: block;

@@ -4,8 +4,6 @@ import CocktailContext from "../../providers/CocktailContext";
 const FilterIngredients = () => {
   const data = useContext(CocktailContext);
 
-  console.log(data);
-
   const ListTag = () =>
     data.map((obj) => (
       <li key={obj.type} className="filter__ingredient">
@@ -14,7 +12,11 @@ const FilterIngredients = () => {
           style={{ backgroundColor: obj.color }}
         ></span>
         <p className="filter__ingredient-title">{obj.type}</p>
-        <input className="filter__ingredient-input" type="checkbox"></input>
+        <input
+          className="filter__ingredient-input"
+          name={obj.type}
+          type="checkbox"
+        ></input>
       </li>
     ));
 
