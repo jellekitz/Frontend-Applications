@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Frontend Applications
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Assesment
+Maak een client-side applicatie in JavaScript die gegevens dynamisch naar weergaven rendert met behulp van een front-end framework of systeem dat door jou is gemaakt. Denk samen na over de verdiensten en kosten van frameworks.
 
-## Available Scripts
+<img src="https://user-images.githubusercontent.com/15923433/144222774-1d453219-b321-4009-b8e1-279317182079.png" />
 
-In the project directory, you can run:
+<details>
+  <summary>Klik hier voor een geanimeerde gif!</summary>
+  <img src="https://user-images.githubusercontent.com/15923433/144222774-1d453219-b321-4009-b8e1-279317182079.png"/>
+</details>
 
-### `npm start`
+## Inhoudsopgave 📑
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Assesment](#assesment)
+* 📑 [Inhoudsopgave](#inhoudsopgave)
+* 📚 [Opdracht](#opdracht)
+  * 📝 [Oefenopdrachten](#oefenopdrachten)
+  * 👨‍🎓 [Eindopdracht](#eindopdracht)
+* ✔️ [To-do's](#to-do's)
+* 📕 [Concept](#concept)
+* ⚙️ [Installatie](#installatie)
+* 🍸 [TheCocktailDB](#theCocktailDB)
+* ℹ️ [Bronnen](#bronnen)
+* 👮‍ [Licence](#licence)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Opdracht 📚
+In de komende twee weken is het de bedoeling om je D3 visualisatie te renderen door middel van componenten in React.
 
-### `npm test`
+### Oefenopdrachten 📝
+Gaandeweg heb ik meerdere oefenopdrachten doorlopen die mij gehlopen hebben tot het maken van mijn eindproduct. Ik verwijs hier in mijn wiki naar: [wiki](https://github.com/jellekitz/Frontend-Applications/wiki).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Eindopdracht 👨‍🎓
+De eindopdracht staat in deze readme beschreven, je kunt de code terug vinden hier boven.
 
-### `npm run build`
+## To-do's ✔️
+TIjdens dit project ben ik aan de slag gegaan met het project board van Github, deze kan je [hier](https://github.com/jellekitz/Frontend-Applications/projects/1) bekijken.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Concept 📕
+Als eindopdracht heb ik gekozen om de externe dataset / API van theCocktailDB te gebruiken. Door middel van deze dataset kan ik verschillende data van cocktails ophalen. Ik heb er voor gekozen om voor een specifieke cocktail de ingredienten met hun waarde op te halen en deze te visualiseren in een cocktailglas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installatie ⚙️
+Om het project te kunnen draaien op je eigen machine zijn er een aantal stappen nodig:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Stap 1** clone het project
+_Doe dit op een handige plek op je machine._
 
-### `npm run eject`
+```
+$ git clone https://github.com/jellekitz/Frontend-Applications.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Stap 2** Navigeer naar het mapje "Frontend-Applications"
+```
+$ cd Frontend-Applications
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Stap 3** Run de applicatie
+```
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## TheCocktailDB 🍸
+Ik heb de dataset / API gebruikt van theCocktailDB, voor meer informatie over theCocktailDB verwijs ik je naar de website van [theCocktailDB](https://www.thecocktaildb.com/) zelf.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Bronnen ℹ️
+* [TheCocktailDB.com. (z.d.). Thecocktaildb. Geraadpleegd op 3 november 2021](https://www.thecocktaildb.com/)
+* [MDN Web Docs. (z.d.). Developer.Mozilla. Geraadpleegd op 3 november 2021](https://developer.mozilla.org/en-US/)
+* [Bostock, M. (z.d.). D3.js - Data-Driven Documents. d3js.org. Geraadpleegd op 18 november 2021](https://d3js.org/)
+* Alle lessen van FP, FD & FA.
 
-## Learn More
+## licence 👮‍♂️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
