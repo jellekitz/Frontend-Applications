@@ -37,14 +37,8 @@ const Svg = () => {
       const filteredData = data.filter((d) => d?.type === name);
 
       if (checked === true) {
-        console.log(name);
-        console.log(checked);
-        console.log(filteredData);
         update(filteredData);
       } else {
-        console.log(name);
-        console.log(checked);
-        console.log(filteredData);
         remove(filteredData);
       }
     });

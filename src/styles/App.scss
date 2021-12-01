@@ -14,6 +14,39 @@ body {
   display: flex;
 }
 
+main {
+  .title__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    h1,
+    h2 {
+      font-family: "Prata", serif;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: $orange;
+      margin: 0 0.7rem 0.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: $gray;
+      margin: 0 0 0.9rem 0;
+    }
+
+    h3 {
+      width: 100%;
+      max-width: 400px;
+      line-height: 1rem;
+      display: block;
+      font-size: 0.7rem;
+    }
+  }
+}
+
 .cocktail {
   position: relative;
   padding: 4rem;
@@ -27,6 +60,10 @@ body {
 
   &__glass-data {
     position: absolute;
+  }
+
+  &__title {
+    margin: 2rem 0 1rem 0;
   }
 }
 
@@ -48,7 +85,7 @@ rect {
 
 .filter {
   margin: 0 0 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 0;
   min-width: 22rem;
   min-height: 100vh;
   background-color: $black;
@@ -59,13 +96,43 @@ rect {
     color: $orange-shade;
   }
 
-  h1 {
-    margin: 0 0 1rem 0;
+  h2 {
+    font-size: 1.2rem;
   }
 
-  h2 {
+  &__nav {
+    &-a {
+      font-size: 0.8rem;
+      font-weight: 900;
+      padding: 1rem 2rem;
+      color: $white;
+      text-decoration: none;
+      display: block;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+      transition: 0.2s;
+
+      &:last-of-type {
+        margin: 0 0 1rem 0;
+      }
+
+      &:hover {
+        background-color: $black-hover;
+      }
+
+      &:focus {
+        background-color: $black-focus;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 0 2rem;
+  }
+
+  &__title {
     margin: 2rem 0 1rem 0;
-    font-size: 1.2rem;
   }
 
   &__ingredients {
