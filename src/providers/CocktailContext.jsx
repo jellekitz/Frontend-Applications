@@ -2,17 +2,21 @@ import { createContext, useState, useEffect } from "react";
 import { removeText, toNumber, addDash } from "../scripts/sanitize.js";
 import * as d3 from "d3";
 
+// Gebruik maken van de CocktailContext (zie providers/CocktailContext)
 const CocktailContext = createContext(null);
 
 export const CocktailProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
+  // Wanneer de componenten zijn gerenderd dan voeren we deze D3 fetch uit
   useEffect(() => {
     d3.json("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=pornstar")
       .then((data) => {
+        // Lege arrays aanmaken voor ingredienten en inhoud
         const ingredients = [];
         const measure = [];
 
+        // Hier pakken we de ingredienten en inhoud van de ingredienten en stoppen deze in de lege arrays
         data.drinks.forEach((obj) => {
           const firstIngr = obj["strIngredient1"];
           const secondIngr = obj["strIngredient2"];
@@ -42,10 +46,12 @@ export const CocktailProvider = ({ children }) => {
           );
         });
 
+        // Functies voor het schoonmaken van de data
         const stringNumber = removeText(measure);
         const measureNumber = toNumber(stringNumber);
         const dashedIngredient = addDash(ingredients);
 
+        // Nieuwe array met schoongemaakte data
         const newData = [
           {
             type: `${dashedIngredient[0]}`,
@@ -79,6 +85,7 @@ export const CocktailProvider = ({ children }) => {
       .catch((err) => console.log(err));
   }, []);
 
+  // Return de provider
   return (
     <CocktailContext.Provider value={data}>{children}</CocktailContext.Provider>
   );

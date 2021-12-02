@@ -1,4 +1,5 @@
 const Welcome = () => {
+  // Retrun de opmaak van deze pagina
   return (
     <main>
       <div className="title__wrapper">

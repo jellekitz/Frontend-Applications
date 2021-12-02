@@ -5,12 +5,15 @@ import CocktailContext from "../../providers/CocktailContext";
 import * as d3 from "d3";
 
 const Svg = () => {
+  // Gebruik maken van de cocktailContext (zie providers/cocktailContext)
   const data = useContext(CocktailContext);
 
+  // Gebruik maken van de useD3 function (staat beschreven in hooks/useD3)
   const ref = useD3((container) => {
+    // Aanmaken van data
     const update = (newData) => {
       container
-        .selectAll("g")
+        .selectAll()
         .data(newData)
         .join((enter) => {
           const rect_enter = enter.append("rect");
@@ -23,6 +26,7 @@ const Svg = () => {
         .style("height", (d) => d?.value * 16 + "px");
     };
 
+    // Verwijderen van data
     const remove = (newData) => {
       d3.select(`#${newData[0]?.type}`)
         .transition()
@@ -31,6 +35,7 @@ const Svg = () => {
         .remove();
     };
 
+    // Filteren van ingredienten
     d3.selectAll(".filter__ingredient-input").on("change", function () {
       const checked = d3.select(this).property("checked");
       const name = d3.select(this).property("name");
@@ -44,6 +49,7 @@ const Svg = () => {
     });
   });
 
+  // Return de image en container
   return (
     <>
       <img
