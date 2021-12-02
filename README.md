@@ -3,6 +3,8 @@
 ## Assesment
 Maak een client-side applicatie in JavaScript die gegevens dynamisch naar weergaven rendert met behulp van een front-end framework of systeem dat door jou is gemaakt. Denk samen na over de verdiensten en kosten van frameworks.
 
+Link naar online omgeving: https://oege.ie.hva.nl/~kitzenj/FA/
+
 <img src="https://user-images.githubusercontent.com/15923433/144222774-1d453219-b321-4009-b8e1-279317182079.png" />
 
 <details>
