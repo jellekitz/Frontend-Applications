@@ -47,7 +47,6 @@ const Svg = () => {
   return (
     <>
       <img
-        ref={ref}
         className="cocktail__glass"
         src={CocktailGlass}
         alt="Cocktail glass"
