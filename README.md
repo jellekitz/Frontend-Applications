@@ -7,7 +7,7 @@ Maak een client-side applicatie in JavaScript die gegevens dynamisch naar weerga
 
 <details>
   <summary>Klik hier voor een geanimeerde gif!</summary>
-  <img src="https://user-images.githubusercontent.com/15923433/144222774-1d453219-b321-4009-b8e1-279317182079.png"/>
+  <img src="https://user-images.githubusercontent.com/15923433/144426054-acf5ef60-3212-4c1f-981b-a9bf604bf808.gif"/>
 </details>
 
 ## Inhoudsopgave 📑
