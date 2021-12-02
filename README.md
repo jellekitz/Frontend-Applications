@@ -68,6 +68,7 @@ Ik heb de dataset / API gebruikt van theCocktailDB, voor meer informatie over th
 * [TheCocktailDB.com. (z.d.). Thecocktaildb. Geraadpleegd op 3 november 2021](https://www.thecocktaildb.com/)
 * [MDN Web Docs. (z.d.). Developer.Mozilla. Geraadpleegd op 3 november 2021](https://developer.mozilla.org/en-US/)
 * [Bostock, M. (z.d.). D3.js - Data-Driven Documents. d3js.org. Geraadpleegd op 18 november 2021](https://d3js.org/)
+* [React – A JavaScript library for building user interfaces. (z.d.). React. Geraadpleegd op 2 december 2021](https://reactjs.org/)
 * Alle lessen van FP, FD & FA.
 
 ## licence 👮‍♂️
