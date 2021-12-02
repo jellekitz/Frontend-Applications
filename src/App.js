@@ -4,7 +4,8 @@ import { CocktailProvider } from "./providers/CocktailContext";
 import Welcome from "./components/pages/Welcome";
 import Svg from "./components/pages/Svg";
 import Filter from "./components/Filter";
-import { Routes, Route, Link } from "react-router-dom";
+import Nav from "./components/Nav";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -17,14 +18,7 @@ const App = () => {
           </Routes>
         </section>
         <section className="filter">
-          <nav className="filter__nav">
-            <Link className="filter__nav-a" to="/">
-              Welkom
-            </Link>
-            <Link className="filter__nav-a" to="/cocktails">
-              Cocktails
-            </Link>
-          </nav>
+          <Nav />
           <Routes>
             <Route
               path="/cocktails"
